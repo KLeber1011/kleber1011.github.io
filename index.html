@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kleber Nascimento — Infrastructure &amp; Integration Architect</title>
+<meta name="description" content="Arquiteto de infraestrutura e integração. Due diligence técnica e integração pós-fusão para operadoras, ISPs, fundos e consolidadoras. 21+ anos medindo a distância entre o declarado e o real.">
+<!-- AJUSTAR se usar domínio próprio -->
+<link rel="canonical" href="https://kleber1011.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Kleber Nascimento — Infrastructure &amp; Integration Architect">
+<meta property="og:description" content="A distância entre o que o sistema declara e o que o campo mostra. Due diligence técnica, integração pós-fusão e arquitetura de infraestrutura crítica.">
+<meta property="og:url" content="https://kleber1011.github.io/">
+<meta property="og:image" content="https://kleber1011.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1419;
+    --ink-2:#1A2129;
+    --paper:#F5F2EC;
+    --paper-2:#ECE8DF;
+    --on-dark:#E8E6E1;
+    --on-dark-dim:#9BA3A8;
+    --teal:#2B8C8C;
+    --teal-bright:#35A6A6;
+    --magenta:#C4365A;
+    --line:#D4CFC4;
+    --line-dark:#2A333C;
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Inter',system-ui,-apple-system,sans-serif;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:70px;}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink-2);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  @media(max-width:620px){.wrap{padding:0 20px;}}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(14,20,25,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dark);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--on-dark);letter-spacing:-.01em;}
+  .brand span{color:var(--teal-bright);}
+  .navlinks{display:flex;gap:26px;}
+  .navlinks a{font-size:14px;color:var(--on-dark-dim);font-weight:500;transition:color .2s;}
+  .navlinks a:hover{color:var(--on-dark);}
+  .navtoggle{display:none;background:none;border:0;color:var(--on-dark);font-size:22px;cursor:pointer;}
+  @media(max-width:760px){.navlinks{display:none;}.navlinks.open{display:flex;position:absolute;top:66px;left:0;right:0;flex-direction:column;background:var(--ink);padding:16px 28px;gap:16px;border-bottom:1px solid var(--line-dark);}.navtoggle{display:block;}}
+
+  .hero{background:var(--ink);color:var(--on-dark);padding:92px 0 84px;position:relative;overflow:hidden;}
+  .hero .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);font-weight:600;margin-bottom:22px;}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5.2vw,52px);line-height:1.08;letter-spacing:-.02em;max-width:17ch;margin-bottom:22px;}
+  .hero h1 em{font-style:italic;color:var(--teal-bright);}
+  .hero .lede{font-size:clamp(16px,2vw,19px);color:var(--on-dark-dim);max-width:60ch;line-height:1.6;}
+  .hero .role{margin-top:30px;font-size:15px;color:var(--on-dark);font-weight:500;}
+  .hero .role b{color:var(--teal-bright);font-weight:600;}
+
+  .recon{margin-top:54px;border:1px solid var(--line-dark);border-radius:4px;overflow:hidden;background:#121922;}
+  .recon-head{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line-dark);}
+  .recon-head div{padding:14px 20px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;}
+  .recon-head .declared{color:var(--on-dark-dim);border-right:1px solid var(--line-dark);}
+  .recon-head .real{color:var(--magenta);}
+  .recon-row{display:grid;grid-template-columns:1fr 1fr;}
+  .recon-row>div{padding:16px 20px;font-size:14.5px;}
+  .recon-row .d{color:var(--on-dark-dim);border-right:1px solid var(--line-dark);}
+  .recon-row .r{color:var(--on-dark);}
+  .recon-row:not(:last-child){border-bottom:1px solid var(--line-dark);}
+  .recon-foot{padding:20px;border-top:1px solid var(--line-dark);background:#0E1419;}
+  .recon-foot .big{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--teal-bright);}
+  .recon-foot .cap{font-size:13px;color:var(--on-dark-dim);margin-top:4px;}
+  @media(max-width:620px){
+    .recon-head,.recon-row{grid-template-columns:1fr;}
+    .recon-head .declared,.recon-row .d{border-right:0;border-bottom:1px solid var(--line-dark);}
+  }
+
+  section{padding:76px 0;}
+  section.light{background:var(--paper);}
+  section.alt{background:var(--paper-2);}
+  .sec-kicker{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--teal);margin-bottom:10px;}
+  .sec-title{font-family:var(--serif);font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.01em;line-height:1.15;color:var(--ink);margin-bottom:14px;max-width:24ch;}
+  .sec-intro{font-size:16.5px;color:#4A5560;max-width:62ch;margin-bottom:40px;}
+
+  .thesis{margin-bottom:38px;}
+  .thesis h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--teal);display:inline-block;margin-bottom:18px;}
+  .article{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;}
+  .article:last-child{border-bottom:0;}
+  .article .t{font-size:16.5px;font-weight:600;color:var(--ink-2);}
+  .article .s{font-size:14.5px;color:#5A6570;margin-top:4px;max-width:70ch;}
+  .article .lnk{font-size:13px;color:var(--teal);font-weight:600;white-space:nowrap;}
+  .article .lnk:hover{text-decoration:underline;}
+  @media(max-width:620px){.article{grid-template-columns:1fr;gap:6px;}}
+
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:720px){.cases{grid-template-columns:1fr;}}
+  .case{border:1px solid var(--line);border-radius:4px;padding:26px;background:var(--paper);transition:border-color .2s;}
+  .case:hover{border-color:var(--teal);}
+  .case .tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px;}
+  .case h4{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.2;}
+  .case p{font-size:14.5px;color:#5A6570;margin-bottom:18px;}
+  .case .repo{font-size:13.5px;color:var(--teal);font-weight:600;word-break:break-all;}
+
+  .svc{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:720px){.svc{grid-template-columns:1fr;}}
+  .svc-card{background:var(--ink);color:var(--on-dark);border-radius:4px;padding:30px;}
+  .svc-card .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-bright);font-weight:600;margin-bottom:14px;}
+  .svc-card h4{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:12px;line-height:1.25;}
+  .svc-card p{font-size:14.5px;color:var(--on-dark-dim);margin-bottom:16px;}
+  .svc-card ul{list-style:none;font-size:14px;color:var(--on-dark);}
+  .svc-card li{padding:6px 0 6px 18px;position:relative;}
+  .svc-card li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;background:var(--teal);border-radius:50%;}
+  .svc-note{font-size:13px;color:var(--on-dark-dim);margin-top:16px;padding-top:14px;border-top:1px solid var(--line-dark);}
+  .svc-note b{color:var(--on-dark);font-weight:600;}
+
+  .dl{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--line);border-radius:4px;padding:22px 26px;background:var(--paper);flex-wrap:wrap;}
+  .dl h4{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+  .dl p{font-size:14px;color:#5A6570;max-width:60ch;}
+  .btn{display:inline-block;font-size:14px;font-weight:600;padding:11px 22px;border-radius:3px;border:1px solid var(--teal);color:var(--teal);transition:background .2s,color .2s;white-space:nowrap;}
+  .btn:hover{background:var(--teal);color:#fff;}
+  .btn.solid{background:var(--teal);color:#fff;border-color:var(--teal);}
+  .btn.solid:hover{background:var(--teal-bright);}
+  .contact .btn{color:var(--on-dark);border-color:var(--line-dark);}
+  .contact .btn.solid{color:#fff;border-color:var(--teal);}
+
+  .contact{background:var(--ink);color:var(--on-dark);}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4vw,38px);letter-spacing:-.01em;margin-bottom:18px;max-width:20ch;}
+  .contact p{color:var(--on-dark-dim);font-size:16px;max-width:54ch;margin-bottom:28px;}
+  .contact .links{display:flex;gap:16px;flex-wrap:wrap;}
+
+  footer{background:#0A0F13;color:var(--on-dark-dim);font-size:13px;padding:34px 0;border-top:1px solid var(--line-dark);}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  footer b{color:var(--on-dark);}
+  .et{color:var(--teal-bright);font-weight:600;}
+  .light .et{color:var(--teal);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#home" class="brand">Kleber Nascimento<span>.</span></a>
+    <button class="navtoggle" id="navtoggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nl">≡</button>
+    <div class="navlinks" id="nl">
+      <a href="#insights">Insights</a>
+      <a href="#cases">Cases</a>
+      <a href="#servicos">Serviços</a>
+      <!-- Reativar quando o PDF existir: <a href="#downloads">Downloads</a> -->
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="kicker">Infrastructure &amp; Integration Architect</div>
+    <h1>A distância entre o que o sistema <em>declara</em> e o que o campo <em>mostra</em>.</h1>
+    <p class="lede">É nessa distância que moram o risco de uma fusão, o custo oculto de uma integração e a decisão de CAPEX mal direcionada. Há 21 anos eu meço essa distância — em plantas de operadora, em inventários de rede e em processos de missão crítica.</p>
+    <div class="role">Kleber Nascimento · <b>21+ anos</b> em Telecom Tier-1 (Vivo/Telefônica, V.tal) · OSS/BSS · IP/MPLS · SD-WAN · Cloud</div>
+
+    <div class="recon" aria-label="Declarado versus real">
+      <div class="recon-head">
+        <div class="declared">O que o sistema declara</div>
+        <div class="real">O que o campo mostra</div>
+      </div>
+      <div class="recon-row">
+        <div class="d">Inventário: "sem capacidade — é preciso comprar"</div>
+        <div class="r">Capacidade real em campo, não catalogada, reaproveitada em 1.878 centrais</div>
+      </div>
+      <div class="recon-row">
+        <div class="d">Fila de pedidos: "bloqueio de engenharia inevitável"</div>
+        <div class="r">Esgotamento previsto por cruzamento OSS/BSS — lead-time de expansão de 6 meses para 5 dias</div>
+      </div>
+      <div class="recon-row">
+        <div class="d">Billing: "recursos de rede faturados"</div>
+        <div class="r">1.696 blocos IPv4 entregues sem faturamento a 29 clientes — mapeados e levados à vice-presidência</div>
+      </div>
+      <div class="recon-foot">
+        <div class="big">R$ 13,6M</div>
+        <div class="cap">de CAPEX preservado quando a decisão passou a nascer do real, não do declarado.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="light" id="insights">
+  <div class="wrap">
+    <div class="sec-kicker">Insights</div>
+    <h2 class="sec-title">Ensaios agrupados por tese — não por data.</h2>
+    <p class="sec-intro">Cada ensaio nasceu como artigo no LinkedIn e continua lá como fonte. Aqui eles vivem organizados pela ideia que defendem.</p>
+
+    <div class="thesis">
+      <h3>Capacidade e previsibilidade</h3>
+      <div class="article">
+        <div><div class="t">GodsEye: quando a previsibilidade vira vantagem competitiva — e o bloqueio de engenharia deixa de ser inevitável</div><div class="s">Cruzando dados que já existiam em OSS e BSS, bloqueios de engenharia passaram a ser antecipados antes de o primeiro pedido chegar à fila. AIOps antes de o termo existir (2015).</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/godseye-quando-previsibilidade-vira-vantagem-e-o-de-kleber-alexandre-uvb4f/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+      <div class="article">
+        <div><div class="t">A era dos sub-bastidores: quando gerenciar infraestrutura legada em escala nacional era o maior desafio estratégico do Telecom brasileiro</div><div class="s">1.878 centrais, 900 delas expandidas em 8 meses com mais de 25 parceiros, e R$13,6M de CAPEX preservado pela leitura do real, não do declarado.</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/era-dos-sub-bastidores-quando-gerenciar-legada-em-o-kleber-alexandre-rrzie/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+    </div>
+
+    <div class="thesis">
+      <h3>Governança e risco</h3>
+      <div class="article">
+        <div><div class="t">Eficiência Operacional x Configuration Drift: por que a métrica que seu board mais cobra é a que menos está sendo protegida</div><div class="s">A divergência silenciosa entre inventário e produção, e por que migração e aquisição são os gatilhos que a transformam em incidente.</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/efici%C3%AAncia-operacional-x-configuration-drift-por-que-cz5mf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+      <!-- CONFERIR o título exato no LinkedIn e, se quiser, adicionar <div class="s">resumo</div> -->
+      <div class="article">
+        <div><div class="t">Terremoto: 46% das antenas caíram em um dia</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/terremoto-46-das-antenas-ca%C3%ADram-em-um-dia-voc%C3%AA-est%C3%A1-kleber-alexandre-kgfff/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+      <div class="article">
+        <div><div class="t">O cobre saiu, a vulnerabilidade persistiu</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/o-cobre-saiu-vulnerabilidade-persistiu-vinte-e-cinco-wabkf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+      <div class="article">
+        <div><div class="t">O ativo do seu balanço foi projetado para um clima que já não existe</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/o-ativo-seu-balan%C3%A7o-foi-projetado-para-um-clima-que-kleber-alexandre-mg9tf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+    </div>
+
+    <div class="thesis">
+      <h3>Mercado e convergência</h3>
+      <div class="article">
+        <div><div class="t">No Brasil, a terceira onda das Tech Telcos já tem nome: ela se chama "Confiança"</div><div class="s">Operadoras passam a processar o dado, não só transportá-lo — e a disputa se desloca da infraestrutura para a credibilidade.</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/brasil-terceira-onda-das-tech-telcos-j%C3%A1-tem-nome-ela-wjcdf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+      <div class="article">
+        <div><div class="t">A onda que as operadoras não querem perder</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/onda-que-operadoras-n%C3%A3o-querem-perder-e-camada-elas-kleber-alexandre-i8xgf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+      <div class="article">
+        <div><div class="t">Todo mundo quer a IA mais avançada. Ninguém pergunta o que acontece quando desligam a sua</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/todo-mundo-quer-ia-mais-avan%C3%A7ada-ningu%C3%A9m-pergunta-sua-ki6ef/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+    </div>
+
+    <!-- Reativar após publicar o Pulse da fusão (inserir o link):
+    <div class="thesis">
+      <h3>Fusões e integração</h3>
+      <div class="article">
+        <div><div class="t">A sinergia que o inventário não viu</div><div class="s">Na fusão, a sinergia é o booking. A integração é o que decide se ela vira receita.</div></div>
+        <a class="lnk" href="LINK_DO_PULSE" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+    </div>
+    -->
+
+    <div class="thesis">
+      <h3>Pessoas</h3>
+      <div class="article">
+        <div><div class="t">Além dos Bits e Bytes: a tecnologia é formada por pessoas — o verdadeiro ativo de valor</div><div class="s">O encerramento da primeira série: nenhum resultado aqui foi construído sozinho.</div></div>
+        <a class="lnk" href="https://www.linkedin.com/pulse/al%C3%A9m-dos-bits-e-bytes-tecnologia-%C3%A9-formada-por-o-de-dlmzf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="cases">
+  <div class="wrap">
+    <div class="sec-kicker">Cases</div>
+    <h2 class="sec-title">Arquiteturas de referência — a prova técnica, em inglês.</h2>
+    <p class="sec-intro">Reference architectures auto-contidas, com HLD, ADRs, diagramas e o business case. O raciocínio, não só o resultado. Hospedadas no GitHub.</p>
+    <div class="cases">
+      <div class="case">
+        <div class="tag">Reference architecture</div>
+        <h4>SD-WAN para varejo multi-site</h4>
+        <p>Conectividade resiliente para rede regional (~35 lojas): overlay SD-WAN, redundância por tier, política por aplicação, transporte híbrido. De requisitos a HLD, ADRs, BoM e riscos.</p>
+        <a class="repo" href="https://github.com/KLeber1011/sdwan-retail-reference-architecture" target="_blank" rel="noopener">github.com/KLeber1011/sdwan-retail-reference-architecture</a>
+      </div>
+      <!-- CONFERIR: manter este card só se o repositório já estiver público -->
+      <div class="case">
+        <div class="tag">Reference architecture</div>
+        <h4>Condomínio logístico multi-inquilino</h4>
+        <p>Infraestrutura compartilhada: meet-me neutro, backbone óptico, energia crítica Tier III-inspired, segregação OT/IT, on-ramp híbrido para cloud. Discovery → HLD → interface → BoM → TCO, com evidência Terraform/AWS.</p>
+        <a class="repo" href="https://github.com/KLeber1011/logistics-dc-reference-architecture" target="_blank" rel="noopener">github.com/KLeber1011/logistics-dc-reference-architecture</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="servicos">
+  <div class="wrap">
+    <div class="sec-kicker">Serviços</div>
+    <h2 class="sec-title">Contratação via EveryThinks Hub Digital.</h2>
+    <p class="sec-intro">A autoria e a autoridade são pessoais; a contratação acontece pela <span class="et">EveryThinks</span>, o veículo de prestação de serviço.</p>
+    <div class="svc">
+      <div class="svc-card">
+        <div class="lbl">Due diligence técnica</div>
+        <h4>Diligência de rede para aquisição de ISPs</h4>
+        <p>Para fundos, consolidadoras e plataformas regionais que compram provedores de fibra e precisam enxergar o risco antes do closing.</p>
+        <ul>
+          <li>Rede: backbone, última milha, POPs, capacidade real</li>
+          <li>OSS/BSS/ERP: heterogeneidade de plataformas entre compradora e adquiridas</li>
+          <li>Inventário × campo: o drift que vira custo de integração</li>
+          <li>Plano D0–D100 e relatório de risco com custo de integração estimado</li>
+        </ul>
+        <div class="svc-note"><b>Base:</b> inventário de 1.878 centrais, planejamento preditivo de capacidade e governança de 1.696 blocos IP em operadora Tier-1.</div>
+      </div>
+      <div class="svc-card">
+        <div class="lbl">Diagnóstico</div>
+        <h4>Diagnóstico de Conectividade 72h</h4>
+        <p>Para empresas que contratam conectividade sem critério e descobrem o risco só quando a operação para.</p>
+        <ul>
+          <li>Mapeamento de gargalos e dependência da operação</li>
+          <li>Parâmetros de RTO/RPO em linguagem de negócio</li>
+          <li>Redundância, backup 4G/5G e SLA adequado ao risco</li>
+          <li>Plano objetivo para contratar certo, sem ficar refém do fornecedor</li>
+        </ul>
+        <div class="svc-note">Metodologia própria, aplicada com a operação em andamento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reativar quando o PDF estiver em /assets/ (e o link "Downloads" no menu):
+<section class="alt" id="downloads">
+  <div class="wrap">
+    <div class="sec-kicker">Downloads</div>
+    <h2 class="sec-title">Material de referência.</h2>
+    <div class="dl">
+      <div>
+        <h4>Checklist do Arquiteto Antes da Fusão</h4>
+        <p>Os artefatos de due diligence técnica por fase — pré-assinatura, pré-closing, pós-closing e contínuo — ancorados em PMI, AWS Well-Architected M&amp;A Lens e TM Forum (SID/eTOM). PT e EN.</p>
+      </div>
+      <a class="btn" href="assets/checklist-arquiteto-fusao.pdf" download>Baixar PDF</a>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <h2>Se há uma distância entre o que seus sistemas declaram e o que a operação mostra, é aí que eu trabalho.</h2>
+    <p>Conversas sobre due diligence técnica, integração pós-fusão e arquitetura de infraestrutura crítica.</p>
+    <div class="links">
+      <a class="btn solid" href="https://www.linkedin.com/in/kleber-alexandre-barros-nascimento-0abb5424/" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- Trocar por contato@seudominio quando houver domínio próprio -->
+      <a class="btn" href="mailto:everythinks.digital@gmail.com">E-mail</a>
+      <a class="btn" href="https://github.com/KLeber1011" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 <b>Kleber Nascimento</b> · Infrastructure &amp; Integration Architect · Arujá, SP</div>
+    <div>Contratação via <span class="et">EveryThinks Hub Digital</span></div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn=document.getElementById('navtoggle'), nl=document.getElementById('nl');
+    btn.addEventListener('click',function(){
+      var open=nl.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nl.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){nl.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+    });
+  })();
+</script>
+</body>
+</html>
