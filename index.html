@@ -91,7 +91,9 @@
   .thesis h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--teal);display:inline-block;margin-bottom:18px;}
   .article{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;}
   .article:last-child{border-bottom:0;}
-  .article .t{font-size:16.5px;font-weight:600;color:var(--ink-2);}
+  .article .t{font-size:16.5px;font-weight:600;color:var(--ink-2);
+    display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;cursor:help;}
+  .article .t:hover,.article .t:focus{-webkit-line-clamp:unset;line-clamp:unset;}
   .article .s{font-size:14.5px;color:#5A6570;margin-top:4px;max-width:70ch;}
   .article .lnk{font-size:13px;color:var(--teal);font-weight:600;white-space:nowrap;}
   .article .lnk:hover{text-decoration:underline;}
@@ -197,11 +199,11 @@
     <div class="thesis">
       <h3>Capacidade e previsibilidade</h3>
       <div class="article">
-        <div><div class="t">GodsEye: quando a previsibilidade vira vantagem competitiva — e o bloqueio de engenharia deixa de ser inevitável</div><div class="s">Cruzando dados que já existiam em OSS e BSS, bloqueios de engenharia passaram a ser antecipados antes de o primeiro pedido chegar à fila. AIOps antes de o termo existir (2015).</div></div>
+        <div><div class="t" title="GodsEye: quando a previsibilidade vira vantagem competitiva — e o bloqueio de engenharia deixa de ser inevitável" tabindex="0">GodsEye: quando a previsibilidade vira vantagem competitiva — e o bloqueio de engenharia deixa de ser inevitável</div><div class="s">Cruzando dados que já existiam em OSS e BSS, bloqueios de engenharia passaram a ser antecipados antes de o primeiro pedido chegar à fila. AIOps antes de o termo existir (2015).</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/godseye-quando-previsibilidade-vira-vantagem-e-o-de-kleber-alexandre-uvb4f/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
       <div class="article">
-        <div><div class="t">A era dos sub-bastidores: quando gerenciar infraestrutura legada em escala nacional era o maior desafio estratégico do Telecom brasileiro</div><div class="s">1.878 centrais, 900 delas expandidas em 8 meses com mais de 25 parceiros, e R$13,6M de CAPEX preservado pela leitura do real, não do declarado.</div></div>
+        <div><div class="t" title="A era dos sub-bastidores: quando gerenciar infraestrutura legada em escala nacional era o maior desafio estratégico do Telecom brasileiro" tabindex="0">A era dos sub-bastidores: quando gerenciar infraestrutura legada em escala nacional era o maior desafio estratégico do Telecom brasileiro</div><div class="s">1.878 centrais, 900 delas expandidas em 8 meses com mais de 25 parceiros, e R$13,6M de CAPEX preservado pela leitura do real, não do declarado.</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/era-dos-sub-bastidores-quando-gerenciar-legada-em-o-kleber-alexandre-rrzie/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
     </div>
@@ -209,20 +211,20 @@
     <div class="thesis">
       <h3>Governança e risco</h3>
       <div class="article">
-        <div><div class="t">Eficiência Operacional x Configuration Drift: por que a métrica que seu board mais cobra é a que menos está sendo protegida</div><div class="s">A divergência silenciosa entre inventário e produção, e por que migração e aquisição são os gatilhos que a transformam em incidente.</div></div>
+        <div><div class="t" title="Eficiência Operacional x Configuration Drift: por que a métrica que seu board mais cobra é a que menos está sendo protegida" tabindex="0">Eficiência Operacional x Configuration Drift: por que a métrica que seu board mais cobra é a que menos está sendo protegida</div><div class="s">A divergência silenciosa entre inventário e produção, e por que migração e aquisição são os gatilhos que a transformam em incidente.</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/efici%C3%AAncia-operacional-x-configuration-drift-por-que-cz5mf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
-      <!-- CONFERIR o título exato no LinkedIn e, se quiser, adicionar <div class="s">resumo</div> -->
+      <!-- Resumos opcionais: adicionar <div class="s">resumo</div> abaixo do título -->
       <div class="article">
-        <div><div class="t">Terremoto: 46% das antenas caíram em um dia, você está preparado?</div></div>
+        <div><div class="t" title="Terremoto — 46% das antenas caíram em um dia. Você está mesmo preparado?" tabindex="0">Terremoto — 46% das antenas caíram em um dia. Você está mesmo preparado?</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/terremoto-46-das-antenas-ca%C3%ADram-em-um-dia-voc%C3%AA-est%C3%A1-kleber-alexandre-kgfff/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
       <div class="article">
-        <div><div class="t">O cobre saiu, a vulnerabilidade persistiu</div></div>
+        <div><div class="t" title="O cobre saiu. A vulnerabilidade persistiu. Vinte e cinco anos depois, o clima ainda decide quando o Brasil fica offline." tabindex="0">O cobre saiu. A vulnerabilidade persistiu. Vinte e cinco anos depois, o clima ainda decide quando o Brasil fica offline.</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/o-cobre-saiu-vulnerabilidade-persistiu-vinte-e-cinco-wabkf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
       <div class="article">
-        <div><div class="t">O ativo do seu balanço foi projetado para um clima que já não existe</div></div>
+        <div><div class="t" title="O ativo no seu balanço foi projetado para um clima que não existe mais…" tabindex="0">O ativo no seu balanço foi projetado para um clima que não existe mais…</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/o-ativo-seu-balan%C3%A7o-foi-projetado-para-um-clima-que-kleber-alexandre-mg9tf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
     </div>
@@ -230,15 +232,15 @@
     <div class="thesis">
       <h3>Mercado e convergência</h3>
       <div class="article">
-        <div><div class="t">No Brasil, a terceira onda das Tech Telcos já tem nome: ela se chama "Confiança"</div><div class="s">Operadoras passam a processar o dado, não só transportá-lo — e a disputa se desloca da infraestrutura para a credibilidade.</div></div>
+        <div><div class="t" title="No Brasil, a terceira onda das Tech Telcos já tem nome: ela se chama &quot;Confiança&quot;" tabindex="0">No Brasil, a terceira onda das Tech Telcos já tem nome: ela se chama "Confiança"</div><div class="s">Operadoras passam a processar o dado, não só transportá-lo — e a disputa se desloca da infraestrutura para a credibilidade.</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/brasil-terceira-onda-das-tech-telcos-j%C3%A1-tem-nome-ela-wjcdf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
       <div class="article">
-        <div><div class="t">A onda que as operadoras não querem perder</div></div>
+        <div><div class="t" title="A onda que as operadoras não querem perder — e a camada que elas não escolhem" tabindex="0">A onda que as operadoras não querem perder — e a camada que elas não escolhem</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/onda-que-operadoras-n%C3%A3o-querem-perder-e-camada-elas-kleber-alexandre-i8xgf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
       <div class="article">
-        <div><div class="t">Todo mundo quer a IA mais avançada. Ninguém pergunta o que acontece quando desligam a sua</div></div>
+        <div><div class="t" title="Todo mundo quer a IA mais avançada. Ninguém pergunta quem pode desligar a sua." tabindex="0">Todo mundo quer a IA mais avançada. Ninguém pergunta quem pode desligar a sua.</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/todo-mundo-quer-ia-mais-avan%C3%A7ada-ningu%C3%A9m-pergunta-sua-ki6ef/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
     </div>
@@ -247,7 +249,7 @@
     <div class="thesis">
       <h3>Fusões e integração</h3>
       <div class="article">
-        <div><div class="t">A sinergia que o inventário não viu</div><div class="s">Na fusão, a sinergia é o booking. A integração é o que decide se ela vira receita.</div></div>
+        <div><div class="t" title="A sinergia que o inventário não viu" tabindex="0">A sinergia que o inventário não viu</div><div class="s">Na fusão, a sinergia é o booking. A integração é o que decide se ela vira receita.</div></div>
         <a class="lnk" href="LINK_DO_PULSE" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
     </div>
@@ -256,7 +258,7 @@
     <div class="thesis">
       <h3>Pessoas</h3>
       <div class="article">
-        <div><div class="t">Além dos Bits e Bytes: a tecnologia é formada por pessoas — o verdadeiro ativo de valor</div><div class="s">O encerramento da primeira série: nenhum resultado aqui foi construído sozinho.</div></div>
+        <div><div class="t" title="Além dos Bits e Bytes: a tecnologia é formada por pessoas — o verdadeiro ativo de valor" tabindex="0">Além dos Bits e Bytes: a tecnologia é formada por pessoas — o verdadeiro ativo de valor</div><div class="s">O encerramento da primeira série: nenhum resultado aqui foi construído sozinho.</div></div>
         <a class="lnk" href="https://www.linkedin.com/pulse/al%C3%A9m-dos-bits-e-bytes-tecnologia-%C3%A9-formada-por-o-de-dlmzf/" target="_blank" rel="noopener">Ler no LinkedIn →</a>
       </div>
     </div>
