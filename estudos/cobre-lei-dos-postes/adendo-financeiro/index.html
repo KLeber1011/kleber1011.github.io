@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adendo financeiro · Lei dos Postes: quanto custa o ninho de mafagafos</title>
+<meta name="description" content="Os números do estudo da Lei dos Postes lidos como receita, custo, passivo e caixa: o cobre, o drop morto, a mão de obra, o poste coordenado e as metas.">
+<link rel="canonical" href="https://kleber1011.github.io/estudos/cobre-lei-dos-postes/adendo-financeiro/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Adendo financeiro · Lei dos Postes: quanto custa o ninho de mafagafos">
+<meta property="og:description" content="Os números do estudo da Lei dos Postes lidos como receita, custo, passivo e caixa: o cobre, o drop morto, a mão de obra, o poste coordenado e as metas.">
+<meta property="og:url" content="https://kleber1011.github.io/estudos/cobre-lei-dos-postes/adendo-financeiro/">
+<meta property="og:image" content="https://kleber1011.github.io/assets/estudos/og-adendo-financeiro-v1.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Adendo financeiro da Lei dos Postes: quanto custa o ninho de mafagafos?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adendo financeiro · Lei dos Postes: quanto custa o ninho de mafagafos">
+<meta name="twitter:description" content="Os números do estudo da Lei dos Postes lidos como receita, custo, passivo e caixa: o cobre, o drop morto, a mão de obra, o poste coordenado e as metas.">
+<meta name="twitter:image" content="https://kleber1011.github.io/assets/estudos/og-adendo-financeiro-v1.png">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1419; --ink-2:#1A2129; --muted:#56616B; --muted-2:#7A848C;
+    --paper:#FBFAF7; --paper-2:#F1EEE7; --rule:#DAD5CA;
+    --on-dark:#ECEAE5; --on-dark-dim:#A1A9AE; --line-dark:#27313A;
+    --teal:#1F7A7A; --teal-bright:#3AA9A9; --alert:#B23A55;
+    --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:72px;}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink-2);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px;}
+  @media(max-width:620px){.wrap{padding:0 20px;}}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(14,20,25,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dark);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--on-dark);}
+  .brand span{color:var(--teal-bright);}
+  .navlinks{display:flex;gap:28px;}
+  .navlinks a{font-size:13.5px;color:var(--on-dark-dim);font-weight:500;letter-spacing:.01em;}
+  .navlinks a:hover{color:var(--on-dark);}
+  .navtoggle{display:none;background:none;border:0;color:var(--on-dark);font-size:22px;cursor:pointer;}
+  @media(max-width:820px){.navlinks{display:none;}.navlinks.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--ink);padding:18px 32px;gap:16px;border-bottom:1px solid var(--line-dark);}.navtoggle{display:block;}}
+
+  /* HERO */
+  .hero{background:var(--ink);color:var(--on-dark);padding:96px 0 88px;}
+  .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-bright);font-weight:600;margin-bottom:24px;}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5vw,54px);line-height:1.07;letter-spacing:-.02em;max-width:18ch;margin-bottom:30px;}
+  .hero h1 em{font-style:italic;color:var(--teal-bright);}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px;}}
+  .hero p{font-size:clamp(15.5px,1.8vw,17px);line-height:1.7;max-width:62ch;}
+  .hero p.context{color:var(--on-dark);margin-bottom:8px;}
+  .src{font-size:12px;color:var(--muted-2);margin-bottom:20px;}
+  .hero .src{color:#7F888E;}
+  .hero p.role{color:var(--on-dark-dim);}
+  .hero p.role em{font-style:normal;color:var(--on-dark);font-weight:500;}
+  .cred{margin-top:26px;padding-top:18px;border-top:1px solid var(--line-dark);font-size:14px;color:var(--on-dark-dim);}
+  .cred b{color:var(--teal-bright);font-weight:600;}
+  /* At a glance */
+  .glance{border:1px solid var(--line-dark);border-radius:2px;padding:26px 26px 22px;background:#121A22;}
+  .glance h2{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark);font-weight:700;margin-bottom:16px;}
+  .glance ol{list-style:none;counter-reset:g;}
+  .glance li{counter-increment:g;position:relative;padding:0 0 14px 34px;font-size:14px;color:var(--on-dark-dim);line-height:1.55;}
+  .glance li::before{content:counter(g,decimal-leading-zero);position:absolute;left:0;top:0;font-family:var(--serif);font-size:15px;color:var(--teal-bright);}
+  .glance li b{color:var(--on-dark);font-weight:600;}
+  .promise{margin-top:44px;padding:4px 0 4px 22px;border-left:3px solid var(--teal-bright);font-family:var(--serif);font-size:clamp(19px,2.4vw,24px);line-height:1.4;max-width:46ch;}
+  .promise em{font-style:italic;color:var(--teal-bright);}
+
+  /* EXHIBITS */
+  .exhibit-label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:52px 0 6px;}
+  .hero .exhibit-label{color:var(--on-dark);}
+  .exhibit-sub{font-size:13.5px;margin-bottom:14px;}
+  .hero .exhibit-sub{color:var(--on-dark-dim);}
+  .recon{border:1px solid var(--line-dark);border-radius:2px;overflow:hidden;background:#111921;}
+  .recon-head,.recon-row{display:grid;grid-template-columns:1fr 1fr;}
+  .recon-head{border-bottom:1px solid var(--line-dark);}
+  .recon-head div{padding:13px 20px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;}
+  .recon-head .declared{color:var(--on-dark-dim);border-right:1px solid var(--line-dark);}
+  .recon-head .real{color:#E06A85;}
+  .recon-row>div{padding:15px 20px;font-size:14.5px;}
+  .recon-row .d{color:var(--on-dark-dim);border-right:1px solid var(--line-dark);}
+  .recon-row:not(:last-child){border-bottom:1px solid var(--line-dark);}
+  .recon-foot{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:18px 20px;border-top:1px solid var(--line-dark);background:#0D141A;}
+  .recon-foot .big{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--teal-bright);}
+  .recon-foot .cap{font-size:13.5px;color:var(--on-dark-dim);}
+  @media(max-width:620px){.recon-head,.recon-row{grid-template-columns:1fr;}.recon-head .declared,.recon-row .d{border-right:0;border-bottom:1px solid var(--line-dark);}}
+  .exhibit-src{font-size:12px;margin-top:10px;}
+  .hero .exhibit-src{color:#7F888E;}
+
+  /* SECTIONS */
+  section{padding:88px 0;}
+  section.alt{background:var(--paper-2);}
+  .sec-num{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+  .sec-num::after{content:"";flex:0 0 56px;height:1px;background:var(--teal);}
+  .sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,38px);letter-spacing:-.015em;line-height:1.14;color:var(--ink);margin-bottom:16px;max-width:26ch;}
+  .sec-intro{font-size:16.5px;color:var(--muted);max-width:66ch;margin-bottom:44px;line-height:1.7;}
+
+  /* MARKET DATA */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);}
+  @media(max-width:820px){.stats{grid-template-columns:1fr;}}
+  .stat{padding:26px 26px 22px 0;}
+  .stat+.stat{padding-left:26px;border-left:1px solid var(--rule);}
+  @media(max-width:820px){.stat+.stat{padding-left:0;border-left:0;border-top:1px solid var(--rule);}}
+  .stat .n{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--ink);line-height:1;margin-bottom:12px;}
+  .stat .n small{font-size:22px;}
+  .stat p{font-size:14.5px;color:var(--ink-2);line-height:1.55;}
+  .stat .who{font-size:12px;color:var(--muted-2);margin-top:12px;}
+  .quote{margin:44px 0 0;font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);line-height:1.35;color:var(--ink);max-width:40ch;}
+  .quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:12.5px;color:var(--muted-2);margin-top:10px;}
+
+  /* SIX QUESTIONS */
+  .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);}
+  @media(max-width:900px){.qgrid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.qgrid{grid-template-columns:1fr;}}
+  .q{padding:26px 24px 28px 0;border-bottom:1px solid var(--rule);}
+  .q .k{font-family:var(--serif);font-size:15px;color:var(--teal);margin-bottom:10px;}
+  .q h3{font-size:16px;font-weight:600;color:var(--ink);line-height:1.35;margin-bottom:8px;}
+  .q p{font-size:14px;color:var(--muted);line-height:1.6;}
+  .note{margin-top:32px;padding:18px 22px;background:#fff;border:1px solid var(--rule);border-left:3px solid var(--alert);font-size:14px;color:var(--ink-2);max-width:80ch;}
+  .note b{color:var(--alert);}
+
+  /* INSIGHTS */
+  .thesis{margin-bottom:40px;}
+  .thesis h3{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);padding-bottom:8px;border-bottom:1px solid var(--ink);margin-bottom:6px;}
+  .article{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;}
+  .article:last-child{border-bottom:0;}
+  .article .t{font-size:16px;font-weight:600;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;cursor:help;}
+  .article .t:hover,.article .t:focus{-webkit-line-clamp:unset;line-clamp:unset;}
+  .article .s{font-size:14.5px;color:var(--muted);margin-top:4px;max-width:72ch;}
+  .article .lnk{font-size:13px;color:var(--teal);font-weight:600;white-space:nowrap;}
+  .article .lnk:hover{text-decoration:underline;}
+  @media(max-width:620px){.article{grid-template-columns:1fr;gap:6px;}}
+
+  /* CASES */
+  .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:960px){.cases{grid-template-columns:1fr 1fr;}}
+  @media(max-width:640px){.cases{grid-template-columns:1fr;}}
+  .case{border-top:2px solid var(--ink);padding:22px 0 0;}
+  .case .tag{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:10px;}
+  .case h4{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);margin-bottom:10px;line-height:1.25;}
+  .case p{font-size:14.5px;color:var(--muted);margin-bottom:16px;}
+  .case .repo{font-size:13px;color:var(--teal);font-weight:600;word-break:break-all;}
+  .case.featured .tag{color:var(--alert);}
+
+  /* SERVICES */
+  .svc{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media(max-width:760px){.svc{grid-template-columns:1fr;}}
+  .svc-card{background:var(--ink);color:var(--on-dark);border-radius:2px;padding:32px;}
+  .svc-card .lbl{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);font-weight:700;margin-bottom:14px;}
+  .svc-card h4{font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:12px;line-height:1.25;}
+  .svc-card p{font-size:14.5px;color:var(--on-dark-dim);margin-bottom:16px;}
+  .svc-card ul{list-style:none;font-size:14px;}
+  .svc-card li{padding:6px 0 6px 18px;position:relative;}
+  .svc-card li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--teal-bright);}
+  .svc-note{font-size:13px;color:var(--on-dark-dim);margin-top:16px;padding-top:14px;border-top:1px solid var(--line-dark);}
+  .svc-note b{color:var(--on-dark);font-weight:600;}
+  .et{color:var(--teal);font-weight:600;}
+
+  /* BUTTONS / CONTACT */
+  .btn{display:inline-block;font-size:14px;font-weight:600;padding:12px 22px;border-radius:2px;border:1px solid var(--line-dark);color:var(--on-dark);white-space:nowrap;font-family:inherit;background:none;cursor:pointer;}
+  .btn:hover{background:var(--line-dark);}
+  .btn.solid{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .btn.solid:hover{background:var(--teal-bright);}
+  .contact{background:var(--ink);color:var(--on-dark);}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4vw,38px);margin-bottom:18px;max-width:22ch;line-height:1.2;}
+  .contact p{color:var(--on-dark-dim);font-size:16px;max-width:56ch;margin-bottom:28px;}
+  .contact .links{display:flex;gap:14px;flex-wrap:wrap;}
+  footer{background:#0A0F13;color:var(--on-dark-dim);font-size:12.5px;padding:30px 0;border-top:1px solid var(--line-dark);}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  footer b{color:var(--on-dark);}
+  footer .et{color:var(--teal-bright);}
+
+  .crumb{font-size:13px;color:var(--on-dark-dim);margin-bottom:28px;}
+  .crumb a{color:var(--teal-bright);}
+  .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+  .meta{font-size:12.5px;color:#7F888E;margin-top:14px;}
+  .stats.dark{border-top:2px solid var(--teal-bright);border-bottom:1px solid var(--line-dark);margin-top:48px;}
+  .stats.dark .stat .n{color:var(--on-dark);}
+  .stats.dark .stat p{color:var(--on-dark-dim);}
+  .stats.dark .stat+.stat{border-left-color:var(--line-dark);}
+  .mapfig{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;}
+  @media(max-width:860px){.mapfig{grid-template-columns:1fr;}}
+  .mapfig img{width:100%;height:auto;border:1px solid var(--rule);background:#fff;}
+  .checklist{list-style:none;counter-reset:c;columns:2;column-gap:40px;}
+  @media(max-width:700px){.checklist{columns:1;}}
+  .checklist li{counter-increment:c;break-inside:avoid;position:relative;padding:12px 0 12px 40px;border-bottom:1px solid var(--rule);font-size:14.5px;color:var(--muted);}
+  .checklist li::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--serif);color:var(--teal);font-size:16px;}
+  .checklist b{color:var(--ink);font-weight:600;}
+  .dl{background:var(--ink);color:var(--on-dark);}
+  .dl .box{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;}
+  @media(max-width:760px){.dl .box{grid-template-columns:1fr;}}
+  .dl h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.4vw,34px);line-height:1.2;max-width:26ch;}
+  .dl p{color:var(--on-dark-dim);margin-top:10px;font-size:15px;max-width:60ch;}
+.hero .q2{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);line-height:1.3;color:var(--teal-bright);max-width:34ch;margin:-12px 0 28px;}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--muted);}
+.legend span{padding:4px 10px;border-radius:20px;color:#fff;font-weight:600;font-size:12px;}
+
+/* ===== ADENDO: acessibilidade e componentes ===== */
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--teal-bright);color:var(--ink);padding:10px 16px;font-weight:700;font-size:14px;border-radius:2px;}
+.skip:focus{top:12px;}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--teal-bright);outline-offset:3px;}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+nav.crumbnav,nav.toc{position:static;backdrop-filter:none;z-index:auto;}
+nav.crumbnav{background:none;border:0;}
+.crumb{list-style:none;display:flex;flex-wrap:wrap;gap:6px;}
+.crumb li+li::before{content:"›";margin-right:6px;color:var(--muted-2);}
+.crumb [aria-current]{color:var(--on-dark);}
+nav.toc{background:var(--paper-2);border-bottom:1px solid var(--rule);}
+nav.toc .wrap{display:block;height:auto;padding-top:18px;padding-bottom:18px;}
+.toc ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13.5px;font-weight:600;}
+.toc a{color:var(--teal);}
+.toc a:hover{text-decoration:underline;}
+.sub{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--ink);margin:44px 0 16px;line-height:1.25;}
+.body{font-size:15.5px;color:var(--ink-2);max-width:72ch;margin-top:18px;line-height:1.7;}
+.qgrid.three{margin-top:40px;}
+/* régua */
+.badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;}
+.b-ver{background:#2E7D4F;color:#fff;}
+.b-par{background:#F6D58A;color:#3B2A00;}
+.b-dec{background:#B23A55;color:#fff;}
+.b-est{background:#56616B;color:#fff;}
+.regua{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);}
+@media(max-width:900px){.regua{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.regua{grid-template-columns:1fr;}}
+.regua>div{padding:18px 20px 20px 0;border-bottom:1px solid var(--rule);}
+.regua dd{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.55;}
+/* cartões numéricos */
+.cards{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);}
+@media(max-width:860px){.cards{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.cards{grid-template-columns:1fr;}}
+.cards li{padding:22px 22px 22px 0;border-bottom:1px solid var(--rule);}
+.cards .n{display:block;font-family:var(--serif);font-size:clamp(28px,3.4vw,36px);font-weight:500;color:var(--ink);line-height:1.05;margin-bottom:10px;}
+.cards .c{display:block;font-size:14px;color:var(--ink-2);line-height:1.55;}
+/* figuras e tabelas */
+figure{margin:8px 0 0;}
+figcaption{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink);margin-bottom:14px;}
+.fsrc{font-size:12.5px;color:var(--muted);margin-top:12px;max-width:90ch;}
+.tabela{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--rule);background:#fff;margin-top:6px;}
+.tabela table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px;}
+.tabela caption{caption-side:top;text-align:left;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink);padding:14px 16px 10px;}
+.tabela th,.tabela td{padding:11px 16px;text-align:left;vertical-align:top;border-top:1px solid var(--rule);}
+.tabela thead th{background:var(--ink);color:var(--on-dark);font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-top:0;}
+.tabela tbody th{font-weight:600;color:var(--ink);}
+.tabela td{color:var(--ink-2);}
+section .sub+.tabela,.sub+.tabela{margin-top:0;}
+.bars{display:grid;gap:14px;padding:22px;background:#fff;border:1px solid var(--rule);}
+.bar{display:grid;grid-template-columns:minmax(150px,240px) 1fr auto;gap:14px;align-items:center;font-size:14px;}
+@media(max-width:620px){.bar{grid-template-columns:1fr;gap:6px;}}
+.bl{color:var(--ink-2);}
+.track{display:block;height:22px;background:var(--paper-2);border-radius:2px;overflow:hidden;}
+.fill{display:block;height:100%;}
+.f1{background:var(--teal);} .f2{background:#C98A1A;} .f3{background:var(--alert);} .f4{background:var(--muted);}
+.bv{font-weight:600;color:var(--ink);white-space:nowrap;}
+details{margin-top:12px;}
+summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--teal);padding:6px 0;}
+.ask{margin-top:32px;padding:24px 26px;background:var(--ink);color:var(--on-dark);border-left:3px solid var(--teal-bright);max-width:86ch;}
+.ask h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.35;margin-bottom:10px;}
+.ask p{font-size:14.5px;color:var(--on-dark-dim);line-height:1.65;}
+.chain{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);background:#fff;}
+@media(max-width:820px){.chain{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.chain{grid-template-columns:1fr;}}
+.chain li{padding:18px 18px 20px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.chain b{display:block;font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);}
+.chain span{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:4px 0 10px;}
+.chain em{display:block;font-style:normal;font-size:13.5px;color:var(--muted);line-height:1.5;}
+.dl p{margin-top:16px;}
+.final{margin-top:36px;padding:4px 0 4px 22px;border-left:3px solid var(--teal-bright);}
+.final .lbl{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);font-weight:700;margin:0 0 10px;}
+.final p:last-child{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);line-height:1.4;color:var(--on-dark);margin:0;max-width:46ch;}
+.plist{list-style:none;max-width:86ch;}
+.plist li{padding:10px 0 10px 18px;position:relative;font-size:14.5px;color:var(--muted);border-bottom:1px solid var(--rule);}
+.plist li::before{content:"";position:absolute;left:0;top:21px;width:7px;height:1px;background:var(--teal);}
+.gloss{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;}
+@media(max-width:700px){.gloss{grid-template-columns:1fr;}}
+.gloss>div{padding:12px 0;border-bottom:1px solid var(--rule);}
+.gloss dt{font-weight:600;color:var(--ink);font-size:15px;}
+.gloss dd{font-size:14px;color:var(--muted);}
+.fontes{list-style:none;}
+.fontes li{padding:10px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2);}
+.fontes a{color:var(--teal);font-weight:600;text-decoration:underline;}
+.hero h1{margin-bottom:18px;}
+.hero .glance ol{margin:0;}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+@media print{
+  nav,.skip,.cta,.btn,#leia-tambem,#contato,footer .et{display:none!important;}
+  body,.hero,.contact,.dl,.ask,section.alt{background:#fff!important;color:#000!important;}
+  .hero *,.dl *,.ask *{color:#000!important;}
+  section{padding:24px 0;}
+  .tabela{overflow:visible;border:0;}
+  .tabela table{min-width:0;}
+  tr,figure,.cards li{break-inside:avoid;}
+  details{display:block;} details>*{display:block;}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<nav aria-label="Menu principal">
+  <div class="wrap">
+    <a href="../../../" class="brand">Kleber Nascimento<span>.</span></a>
+    <button class="navtoggle" id="navtoggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nl">≡</button>
+    <div class="navlinks" id="nl">
+      <a href="../../../#fase-zero">Fase Zero</a>
+      <a href="../../../#insights">Insights</a>
+      <a href="../../../#estudos">Estudos</a>
+      <a href="../../../#cases">Cases</a>
+      <a href="../../../#servicos">Serviços</a>
+      <a href="../../../#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <nav class="crumbnav" aria-label="Trilha de navegação">
+      <ol class="crumb">
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../../#estudos">Estudos</a></li>
+        <li><a href="../">Lei dos Postes</a></li>
+        <li aria-current="page">Adendo financeiro</li>
+      </ol>
+    </nav>
+    <div class="kicker">Adendo financeiro · Estudo PL 3220/2019 · Novembro de 2026</div>
+    <h1>Adendo financeiro</h1>
+    <p class="q2">Quanto custa o <em>ninho de mafagafos</em>?</p>
+    <div class="hero-grid">
+      <div>
+        <p class="context">Os números do estudo da Lei dos Postes, lidos como receita, custo, passivo e caixa. Nenhum dado novo: as toneladas, os tempos, as equipes e as metas são os do estudo. O adendo só mostra o que eles significam para quem decide e para quem paga.</p>
+        <p class="role">O estudo mediu o poste. <em>O adendo põe preço nele.</em></p>
+        <div class="cta">
+          <a class="btn solid" href="../" data-goatcounter-click="adendo-para-estudo">Ler o estudo completo</a>
+          <a class="btn" href="#sumario">Ir ao sumário executivo</a>
+        </div>
+        <p class="meta">A versão em PDF do adendo está em revisão e será publicada nesta página.</p>
+      </div>
+      <div class="glance">
+        <h2>As cinco conclusões</h2>
+        <ol>
+          <li><b>Receita de sucata não é resultado.</b> O preço por quilo só vira caixa se cobrir o custo de quem sobe no poste.</li>
+          <li><b>O drop de fibra é passivo puro.</b> Não tem sucata que pague a retirada; cada cancelamento cria custo sem receita.</li>
+          <li><b>Prazo legal transforma custo futuro em obrigação.</b> Com prazo e responsável definidos, a retirada pode virar provisão.</li>
+          <li><b>A coordenação é a maior alavanca de custo.</b> Cada visita a mais ao mesmo poste repete deslocamento, sinalização, escada e análise de risco.</li>
+          <li><b>Meta sem base contábil não se acompanha.</b> Receita, caixa ou ganho: sem dizer qual, o ritmo não pode ser medido.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<nav class="toc" aria-label="Seções do adendo">
+  <div class="wrap">
+    <ol>
+      <li><a href="#como-ler" data-goatcounter-click="adendo-indice-como-ler">Como ler</a></li>
+      <li><a href="#sumario" data-goatcounter-click="adendo-indice-sumario">Sumário</a></li>
+      <li><a href="#a1" data-goatcounter-click="adendo-indice-a1">A1 · Balanço</a></li>
+      <li><a href="#a2" data-goatcounter-click="adendo-indice-a2">A2 · Cobre</a></li>
+      <li><a href="#a3" data-goatcounter-click="adendo-indice-a3">A3 · Drop</a></li>
+      <li><a href="#a4" data-goatcounter-click="adendo-indice-a4">A4 · Mão de obra</a></li>
+      <li><a href="#a5" data-goatcounter-click="adendo-indice-a5">A5 · Poste coordenado</a></li>
+      <li><a href="#a6" data-goatcounter-click="adendo-indice-a6">A6 · Metas</a></li>
+      <li><a href="#a7" data-goatcounter-click="adendo-indice-a7">A7 · Conciliação</a></li>
+      <li><a href="#a8" data-goatcounter-click="adendo-indice-a8">A8 · Posição</a></li>
+      <li><a href="#a9" data-goatcounter-click="adendo-indice-a9">A9 · Contas</a></li>
+      <li><a href="#a10" data-goatcounter-click="adendo-indice-a10">A10 · Glossário e fontes</a></li>
+    </ol>
+  </div>
+</nav>
+
+<!-- COMO LER -->
+<section id="como-ler" aria-labelledby="t-como-ler">
+  <div class="wrap">
+    <div class="sec-num">Como ler este adendo</div>
+    <h2 class="sec-title" id="t-como-ler">O estudo mediu o poste. O adendo põe preço nele.</h2>
+    <p class="sec-intro">O estudo mostrou por que o cabo morto fica: a retirada é trabalho sem preço, o cabo cortado não tem dono e o que desce não tem destino. Este adendo pega os mesmos números (toneladas, postes, horas, equipes e metas) e os traduz na linguagem de quem aprova orçamento: receita, custo, passivo e caixa.</p>
+    <div class="qgrid">
+      <div class="q"><h3>O que o adendo faz</h3><p>Converte as premissas de campo do estudo em valores por quilo, por poste, por drop e por ano, e mostra em que linha financeira cada um cai.</p></div>
+      <div class="q"><h3>O que ele não faz</h3><p>Não analisa balanços de empresas, não avalia gestão e não traz dado que não esteja no estudo ou numa norma contábil citada.</p></div>
+      <div class="q"><h3>Para quem</h3><p>Quem contrata, regula, opera ou financia a retirada: o número que falta para a decisão é o custo, e não a tonelada.</p></div>
+    </div>
+    <h3 class="sub">A mesma régua do estudo</h3>
+    <dl class="regua">
+      <div><dt><span class="badge b-ver">Verificável</span></dt><dd>Número do estudo com documento público que permite conferência: contrato, laudo, norma, processo.</dd></div>
+      <div><dt><span class="badge b-par">Parcial</span></dt><dd>Parte da cadeia é pública, mas falta um elo: a base da meta, o volume físico, quem paga o custo.</dd></div>
+      <div><dt><span class="badge b-dec">Declaração</span></dt><dd>Número dito por empresa ou autoridade, sem a cadeia que permita conferi-lo.</dd></div>
+      <div><dt><span class="badge b-est">Estimativa</span></dt><dd>Conta deste adendo sobre as premissas do estudo. Mede ordem de grandeza, não afirma fato.</dd></div>
+    </dl>
+    <p class="note"><b>Nota.</b> Quase todos os valores em reais deste adendo são estimativas: aplicam o custo de equipe-dia do estudo (R$ 3 mil a R$ 4 mil, premissa de campo) aos volumes e tempos do próprio estudo. Nenhuma afirmação de irregularidade é feita sobre as empresas citadas no estudo. Este adendo não é recomendação de investimento.</p>
+  </div>
+</section>
+
+<!-- SUMÁRIO -->
+<section class="alt" id="sumario" aria-labelledby="t-sumario">
+  <div class="wrap">
+    <div class="sec-num">Sumário executivo</div>
+    <h2 class="sec-title" id="t-sumario">O ninho tem preço. Ele só não está em nenhuma linha.</h2>
+    <p class="sec-intro">A retirada do cabo morto não é investimento nem manutenção. Por isso não tem orçamento, não tem indicador e não aparece no resultado de ninguém, até virar multa, prazo legal ou meta anunciada. Os números do estudo permitem estimar quanto ela custa.</p>
+    <ul class="cards">
+      <li><span class="n">R$ 1,1 bi</span><span class="c">da projeção de cobre da Oi (jul/2025), como receita líquida do dono; retirada, transporte e beneficiamento ficam com quem compra.</span></li>
+      <li><span class="n">R$ 24,50</span><span class="c">por quilo é o desembolso do comprador no contrato de 2026: R$ 9,50 ao dono e R$ 15 de retirada e logística.</span></li>
+      <li><span class="n">R$ 154 a 615</span><span class="c">de técnico para retirar um drop morto, que não tem sucata para pagar a própria retirada.</span></li>
+      <li><span class="n">R$ 115 a 235</span><span class="c">de custo de campo por poste na retirada aérea: o piso do preço por poste liberado.</span></li>
+      <li><span class="n">+22%</span><span class="c">de pessoas ao mesmo tempo para cumprir a mesma meta quando o calendário real é de 180 dias.</span></li>
+      <li><span class="n">R$ 88 mi/mês</span><span class="c">exigidos pela meta de cobre da Vivo até 2028; nenhuma meta diz se mede receita, caixa ou ganho.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- A1 -->
+<section id="a1" aria-labelledby="t-a1">
+  <div class="wrap">
+    <div class="sec-num">A1 · Onde o poste cai no balanço</div>
+    <h2 class="sec-title" id="t-a1">Instalar tem linha. Retirar não tem.</h2>
+    <p class="sec-intro">O estudo mostrou duas lógicas de pagamento nos contratos de rede externa (instalação por entrega, manutenção por planta mantida) e uma terceira atividade que não cabe em nenhuma delas. Na contabilidade, essa divisão se repete.</p>
+    <figure>
+      <figcaption>Figura A1 · Cada fenômeno do estudo e a linha financeira em que ele cai</figcaption>
+      <div class="tabela" role="region" aria-label="Tabela da Figura A1" tabindex="0">
+        <table>
+          <caption class="sr">Fenômenos do estudo, página de origem, linha financeira e classificação na régua</caption>
+          <thead><tr><th scope="col">Fenômeno do estudo</th><th scope="col">Pág. do estudo</th><th scope="col">Linha financeira</th><th scope="col">Régua</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cabo novo instalado</th><td>8</td><td>Capex: vira ativo e é depreciado</td><td><span class="badge b-ver">Verificável</span></td></tr>
+            <tr><th scope="row">Manutenção da planta</th><td>8</td><td>Opex: custo do período, entra no EBITDA</td><td><span class="badge b-ver">Verificável</span></td></tr>
+            <tr><th scope="row">Retirada de cabo morto</th><td>8</td><td>Nenhuma: não é capex nem opex contratado</td><td><span class="badge b-dec">Declaração</span></td></tr>
+            <tr><th scope="row">Cobre vendido</th><td>14</td><td>Ganho (ou perda) na baixa do ativo, não receita (CPC 27, item 68)</td><td><span class="badge b-par">Parcial</span></td></tr>
+            <tr><th scope="row">Drop morto após cancelamento</th><td>9 e 10</td><td>Nenhuma: custo futuro sem registro</td><td><span class="badge b-dec">Declaração</span></td></tr>
+            <tr><th scope="row">Técnico deslocado para mutirão</th><td>11</td><td>Custo de oportunidade: ativação adiada, reparo fora do prazo</td><td><span class="badge b-est">Estimativa</span></td></tr>
+            <tr><th scope="row">Regularização do poste</th><td>5</td><td>Custo do ocupante (Res. Conjunta 4/2014); possível provisão com prazo legal</td><td><span class="badge b-par">Parcial</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <div class="qgrid three">
+      <div class="q"><h3>Instalação · Capex</h3><p>Cria ativo, tem preço unitário e medição. O custo vai para o imobilizado e volta como depreciação ao longo dos anos.</p></div>
+      <div class="q"><h3>Manutenção · Opex</h3><p>Custo do período, medido por indicador. Pesa no EBITDA do ano em que acontece.</p></div>
+      <div class="q"><h3>Retirada · Sem linha</h3><p>Sem preço, sem indicador, sem centro de custo. Quando acontece, sai de outra atividade; quando não acontece, ninguém registra.</p></div>
+    </div>
+    <p class="note"><b>O custo que não aparece também é pago.</b> A retirada que ninguém orça é paga de três formas: com horas de técnico tiradas da ativação e do reparo, com o peso extra no poste e com multas quando a pressão vem de fora. Nenhuma delas aparece com o nome "retirada".</p>
+    <aside class="ask" aria-labelledby="t-a1-ask">
+      <h3 id="t-a1-ask">Se a retirada do drop se tornar obrigação, por lei ou por regulação, o custo do drop instalado hoje está completo?</h3>
+      <p>Quando existe obrigação de retirar um ativo no fim do uso, o custo estimado da retirada entra no custo do ativo já na instalação, com uma provisão correspondente (CPC 27, item 16, e CPC 25). Hoje essa obrigação não existe para o drop; por isso a retirada não tem linha. A parte A3 mostra o tamanho dela.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- A2 -->
+<section class="alt" id="a2" aria-labelledby="t-a2">
+  <div class="wrap">
+    <div class="sec-num">A2 · O cobre</div>
+    <h2 class="sec-title" id="t-a2">R$ 1,1 bilhão é o valor de quem vende. O custo é de quem sobe no poste.</h2>
+    <p class="sec-intro">O cobre aéreo da Oi analisado no estudo soma de 89 mil a 95 mil toneladas. Com a falência (decretada em 10/11/2025 e restabelecida pelo TJ-RJ em 25/08/2026, comunicada pela Oi em fato relevante de 26/08/2026), ele integra os ativos da massa falida, sujeitos à liquidação. Os R$ 1,1 bilhão são a escala projetada no relatório de julho de 2025, como receita líquida, com a retirada a cargo do comprador; não uma meta em execução.</p>
+    <figure>
+      <figcaption>Figura A2 · Valor do dono × custo de quem compra e retira (R$ bilhões, 89 mil a 95 mil t)</figcaption>
+      <div class="bars" role="img" aria-labelledby="a2-desc">
+        <div class="bar"><span class="bl">Valor do dono · R$ 9,50/kg</span><span class="track"><span class="fill f1" style="width:56%"></span></span><span class="bv">R$ 0,85 a 0,90 bi</span></div>
+        <div class="bar"><span class="bl">Custo de campo · R$ 6 a 12/kg</span><span class="track"><span class="fill f2" style="width:71%"></span></span><span class="bv">R$ 0,53 a 1,14 bi</span></div>
+        <div class="bar"><span class="bl">Custo total · R$ 15/kg</span><span class="track"><span class="fill f3" style="width:89%"></span></span><span class="bv">R$ 1,34 a 1,43 bi</span></div>
+      </div>
+      <p id="a2-desc" class="sr">Gráfico de barras: valor do dono de R$ 0,85 a 0,90 bilhão; custo de campo, só retirada, de R$ 0,53 a 1,14 bilhão; custo total com retirada, transporte e beneficiamento de R$ 1,34 a 1,43 bilhão. Os números estão na tabela a seguir.</p>
+      <details>
+        <summary>Ver os números da Figura A2</summary>
+        <div class="tabela" role="region" aria-label="Tabela da Figura A2" tabindex="0">
+          <table>
+            <caption class="sr">Valores da Figura A2 para 89 mil a 95 mil toneladas</caption>
+            <thead><tr><th scope="col">Componente</th><th scope="col">R$ por kg</th><th scope="col">Total (R$ bi)</th><th scope="col">Base</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Valor do dono</th><td>9,50</td><td>0,85 a 0,90</td><td>Contrato de 2026</td></tr>
+              <tr><th scope="row">Custo de campo (só retirada)</th><td>6 a 12</td><td>0,53 a 1,14</td><td>Premissa do estudo</td></tr>
+              <tr><th scope="row">Custo total</th><td>15</td><td>1,34 a 1,43</td><td>Retirada, transporte e beneficiamento</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <p class="fsrc">Volumes e preços: estudo, p. 14. Custo de R$ 15/kg: contrato de 2026 (Canaltech; Teletime, 23/07/2026). <span class="badge b-est">Estimativa</span></p>
+    </figure>
+    <h3 class="sub">Três referências para o custo por quilo</h3>
+    <div class="tabela" role="region" aria-label="Três referências para o custo por quilo" tabindex="0">
+      <table>
+        <caption class="sr">Referências de custo por quilo de cobre retirado</caption>
+        <thead><tr><th scope="col">Referência</th><th scope="col">R$/kg</th><th scope="col">O que inclui</th><th scope="col">Régua</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Laudo de 2023</th><td>5 a 10</td><td>Retirada da rede</td><td><span class="badge b-ver">Verificável</span></td></tr>
+          <tr><th scope="row">Equipe-dia do estudo (R$ 3 mil a 4 mil ÷ 347 a 520 kg)</th><td>5,77 a 11,53</td><td>Retirada em campo</td><td><span class="badge b-est">Estimativa</span></td></tr>
+          <tr><th scope="row">Contrato de 2026, comprador arca</th><td>15</td><td>Retirada, transporte e beneficiamento</td><td><span class="badge b-par">Parcial</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="body">A equipe-dia do estudo gera um custo coerente com as referências públicas: o piso cai dentro do laudo de 2023, o teto fica R$ 1,53 acima dele, e os dois ficam abaixo dos R$ 15 de 2026, que somam a logística que o estudo contou sem precificar.</p>
+    <ul class="cards three">
+      <li><span class="n">R$ 24,50</span><span class="c">por quilo de desembolso do comprador: R$ 9,50 ao dono e R$ 15 de retirada, transporte e beneficiamento.</span></li>
+      <li><span class="n">R$ 2,2 a 2,3 bi</span><span class="c">de desembolso total para 89 mil a 95 mil t nessas condições.</span></li>
+      <li><span class="n">2%</span><span class="c">da projeção recebidos até julho de 2026: R$ 23,4 mi de R$ 1,1 bi.</span></li>
+    </ul>
+    <p class="note"><b>A cotação do cobre refinado não é a régua.</b> O que desce é cabo com capa e mensageiro, que precisa ser separado e beneficiado. O estudo registrou a mesma pergunta na Vivo: metas "livres de custos de extração" e, depois, "já inclui o custo de desmobilização". <span class="badge b-par">Parcial</span></p>
+  </div>
+</section>
+
+<!-- A3 -->
+<section id="a3" aria-labelledby="t-a3">
+  <div class="wrap">
+    <div class="sec-num">A3 · O drop morto</div>
+    <h2 class="sec-title" id="t-a3">O cobre ainda paga a própria retirada. O drop de fibra, não.</h2>
+    <p class="sec-intro">O estudo estimou de 480 mil a 1,5 milhão de km de drop deixados no poste por ano, a partir de 4 a 7,5 milhões de cancelamentos. O drop é leve e não tem valor de sucata. Cada um é custo sem receita do outro lado.</p>
+    <figure>
+      <figcaption>Figura A3 · Custo de retirar o que os cancelamentos deixam no poste</figcaption>
+      <ul class="cards three">
+        <li><span class="n">R$ 231 a 308</span><span class="c">por hora de técnico: equipe-dia de R$ 3 mil a 4 mil ÷ 2 técnicos ÷ 6,5 h produtivas.</span></li>
+        <li><span class="n">R$ 154 a 615</span><span class="c">por drop retirado: 40 min a 2 h de técnico para 4 a 6 lances.</span></li>
+        <li><span class="n">R$ 0,6 a 4,6 bi</span><span class="c">por ano, se todo drop deixado por 4 a 7,5 milhões de cancelamentos fosse retirado.</span></li>
+      </ul>
+      <p class="fsrc">Tempos: estudo, p. 8. Cancelamentos e lances por troca: estudo, p. 10. Equipe e jornada: estudo, p. 15. A faixa é larga porque combina o menor tempo com o menor volume e o maior com o maior. <span class="badge b-est">Estimativa</span></p>
+    </figure>
+    <h3 class="sub">Cada milhão de cancelamentos deixa R$ 154 a 615 milhões de retirada sem preço</h3>
+    <p class="body">Na prática, quase nada disso é gasto: o drop fica. O custo não desaparece. Ele vira peso no poste, ocupação do espaço que outro ocupante paga, dano a terceiro na próxima intervenção e risco em temporal. É um passivo que cresce a cada mês, junto com o churn, e que não aparece em nenhuma demonstração porque ninguém tem a obrigação de retirá-lo.</p>
+    <aside class="ask" aria-labelledby="t-a3-ask">
+      <h3 id="t-a3-ask">Quando a lei dá prazo, o custo pode virar provisão</h3>
+      <p>Pelo CPC 25, uma obrigação presente, com saída de caixa provável e valor que se possa estimar, é registrada como provisão. Hoje, sem meta de volume e sem responsável pelo cabo cortado, a retirada não cumpre esses requisitos. Se a regulamentação da Lei dos Postes fixar prazo, responsável e preço, o ocupante pode passar a ter uma obrigação a reconhecer, e o drop morto entra no balanço pela primeira vez.</p>
+    </aside>
+    <p class="note"><b>Ligação com o estudo.</b> As regras de consumidor tratam da coleta do equipamento após o cancelamento, não do cabo. A logística reversa das operadoras recolhe o modem, que tem valor; o drop, que só tem custo, não tem tarefa, preço nem indicador.</p>
+  </div>
+</section>
+
+<!-- A4 -->
+<section class="alt" id="a4" aria-labelledby="t-a4">
+  <div class="wrap">
+    <div class="sec-num">A4 · Mão de obra e calendário</div>
+    <h2 class="sec-title" id="t-a4">A retirada concorre com a receita pela mesma equipe</h2>
+    <p class="sec-intro">Ativação, reparo e retirada puxam da mesma força de trabalho em altura, com três lógicas de pagamento: por ordem de serviço, por prazo e por quilo. O técnico que vai para a retirada sai de uma atividade que gera receita ou evita multa.</p>
+    <figure>
+      <figcaption>Figura A4 · O que o calendário e a mão de obra significam em reais</figcaption>
+      <ul class="cards three">
+        <li><span class="n">R$ 270 a 360 mi</span><span class="c">por ano para cada mil técnicos em altura: 500 equipes × 180 dias × R$ 3 mil a 4 mil.</span></li>
+        <li><span class="n">R$ 0,6 a 1,2 bi</span><span class="c">de equipes para retirar o cobre aéreo da Oi em um ano: 202 mil a 303 mil equipes-dia.</span></li>
+        <li><span class="n">+22%</span><span class="c">de pessoas ao mesmo tempo para a mesma meta quando o ano de campo tem 180 dias, não 220.</span></li>
+      </ul>
+      <p class="fsrc">Técnicos e equipes-dia: estudo, p. 15 e 19. Calendário: estudo, p. 19. <span class="badge b-est">Estimativa</span></p>
+    </figure>
+    <h3 class="sub">O calendário não muda o custo total. Muda o pico.</h3>
+    <p class="body">A quantidade de trabalho é a mesma com 180 ou 220 dias; o que muda é quantas pessoas precisam estar em campo ao mesmo tempo. O aéreo da Oi passa de 1.840 a 2.760 para 2.250 a 3.370 técnicos em altura. Somadas as três frentes do estudo, são de 2,5 mil a 6,4 mil pessoas, das quais 225 a 763 cabistas, o ofício mais difícil de contratar. Pico de contratação, num mercado em que a mesma mão de obra ativa e repara fibra, é pressão sobre preço de serviço.</p>
+    <div class="tabela" role="region" aria-label="O custo de oportunidade" tabindex="0">
+      <table>
+        <caption>O custo de oportunidade tem nome</caption>
+        <thead><tr><th scope="col">Atividade</th><th scope="col">Como é paga</th><th scope="col">O que acontece quando o técnico sai para retirar cabo</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ativação</th><td>Por ordem de serviço</td><td>A instalação atrasa e a receita do novo cliente começa depois</td></tr>
+          <tr><th scope="row">Reparo</th><td>Por prazo (SLA)</td><td>O reparo sai do prazo; o risco é multa e cancelamento</td></tr>
+          <tr><th scope="row">Retirada</th><td>Por quilo (cobre) ou sem preço (drop)</td><td>Só é paga quando há metal; o drop fica para depois</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>Uma promessa de "X toneladas até a data Y" sem premissa de calendário é declaração</b>, e, sem premissa de equipe e custo de equipe-dia, também é orçamento impossível de aprovar.</p>
+  </div>
+</section>
+
+<!-- A5 -->
+<section id="a5" aria-labelledby="t-a5">
+  <div class="wrap">
+    <div class="sec-num">A5 · O poste coordenado</div>
+    <h2 class="sec-title" id="t-a5">A coordenação vale mais que a própria retirada</h2>
+    <p class="sec-intro">O estudo comparou seis ou dez empresas subindo no mesmo poste em dias diferentes com uma equipe dedicada que faz tudo numa visita. Em minutos, a diferença era de 200 contra 20. Em reais, ela é maior que o custo de retirar o cabo.</p>
+    <figure>
+      <figcaption>Figura A5 · Unidade de custo do poste: retirada × visitas repetidas</figcaption>
+      <ul class="cards three">
+        <li><span class="n">R$ 115 a 235</span><span class="c">de custo de campo por poste na retirada aérea: R$ 3 mil a 4 mil ÷ 17 a 26 postes por equipe-dia.</span></li>
+        <li><span class="n">R$ 154 a 205</span><span class="c">por visita a mais ao mesmo poste: 20 min de equipe em deslocamento, sinalização, escada e risco.</span></li>
+        <li><span class="n">R$ 0,8 a 1,8 mil</span><span class="c">por poste em visitas repetidas, com 6 a 10 ocupantes subindo separadamente.</span></li>
+      </ul>
+      <p class="fsrc">Tempos de preparação: estudo, p. 22. Postes por equipe-dia: estudo, p. 15. Equipe-hora: R$ 3 mil a 4 mil ÷ 6,5 h. <span class="badge b-est">Estimativa</span></p>
+    </figure>
+    <h3 class="sub">O modelo de receita do posteiro já está no estudo</h3>
+    <p class="body">A empresa dedicada ao poste, prevista na regulamentação, só vira operação com preço por unidade: <strong>por poste ou lance liberado e por quilo conferido</strong>. O custo de campo dá o piso desse preço (R$ 115 a 235 por poste na retirada aérea, antes de logística, margem e risco). O ganho de coordenação dá o argumento para quem paga: cada visita evitada vale R$ 154 a 205.</p>
+    <div class="tabela" role="region" aria-label="Mutirão atual e equipe dedicada" tabindex="0">
+      <table>
+        <caption>Mutirão atual × equipe dedicada</caption>
+        <thead><tr><th scope="col">Indicador</th><th scope="col">Mutirão atual</th><th scope="col">Equipe dedicada</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Postes por equipe por dia</th><td>3,7 por empresa (Londrina)</td><td>17 a 26 (premissa do estudo)</td></tr>
+          <tr><th scope="row">Visitas por poste</th><td>Uma por ocupante</td><td>Uma</td></tr>
+          <tr><th scope="row">Cabo cortado</th><td>Fica: ninguém prova que é seu</td><td>Identificado e retirado no mesmo ciclo</td></tr>
+          <tr><th scope="row">Remuneração</th><td>Nenhuma: custo sem preço</td><td>Por poste liberado e por quilo conferido</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fsrc">O mutirão de Londrina trabalha em janelas de cerca de 5 horas; a comparação de produtividade (4,6 a 7 vezes) é de ordem de grandeza, não de desempenho.</p>
+  </div>
+</section>
+
+<!-- A6 -->
+<section class="alt" id="a6" aria-labelledby="t-a6">
+  <div class="wrap">
+    <div class="sec-num">A6 · As metas</div>
+    <h2 class="sec-title" id="t-a6">Uma meta só se acompanha se disser o que está medindo</h2>
+    <p class="sec-intro">O estudo mostrou que as metas de retirada de cobre não têm esteira física. No lado financeiro, falta outra coisa: dizer se a meta é de receita contratada, de caixa recebido ou de ganho líquido dos custos de retirada.</p>
+    <figure>
+      <figcaption>Figura A6 · Meta de cobre de R$ 3 bi até dez/2028 × realizado público (R$ milhões)</figcaption>
+      <div class="bars" role="img" aria-labelledby="a6-desc">
+        <div class="bar"><span class="bl">Realizado até o 2T26</span><span class="track"><span class="fill f1" style="width:15%"></span></span><span class="bv">R$ 443 mi (15%)</span></div>
+        <div class="bar"><span class="bl">Meta até dez/2028</span><span class="track"><span class="fill f4" style="width:100%"></span></span><span class="bv">R$ 3.000 mi</span></div>
+      </div>
+      <p id="a6-desc" class="sr">Gráfico de barras: realizado de R$ 443 milhões, 15% de uma meta de R$ 3 bilhões até dezembro de 2028. A meta exige cerca de R$ 88 milhões por mês a partir do último dado público.</p>
+      <p class="fsrc">Meta, realizado e valor mensal exigido: estudo, p. 18, 20 e 21 (Figura 18). <span class="badge b-par">Parcial</span></p>
+    </figure>
+    <ul class="cards three">
+      <li><span class="n">R$ 88 mi/mês</span><span class="c">exigidos pela meta de cobre da Vivo até dez/2028, a partir do último dado público.</span></li>
+      <li><span class="n">2%</span><span class="c">da projeção de cobre da Oi recebidos até jul/2026: R$ 23,4 mi de R$ 1,1 bi.</span></li>
+      <li><span class="n">7 mil t</span><span class="c">na Algar, sem comprador, preço ou ritmo divulgados.</span></li>
+    </ul>
+    <div class="tabela" role="region" aria-label="Três números para a mesma tonelada" tabindex="0">
+      <table>
+        <caption>Três números para a mesma tonelada</caption>
+        <thead><tr><th scope="col">Base da meta</th><th scope="col">O que mede</th><th scope="col">O que fica de fora</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Receita contratada</th><td>Quilos vendidos × preço</td><td>Custo de retirada e logística, se for bruta</td></tr>
+          <tr><th scope="row">Caixa recebido</th><td>Dinheiro que de fato entrou</td><td>Vendas faturadas e não pagas</td></tr>
+          <tr><th scope="row">Ganho líquido</th><td>Venda menos custos de retirada e valor contábil do cabo baixado</td><td>Comparação direta com a receita</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="body">A meta de R$ 3 bi até 2028 exige cerca de R$ 88 milhões por mês a partir do último dado público. Nenhuma meta anunciada diz se mede receita contratada, caixa recebido ou ganho líquido dos custos de retirada. A exceção que confirma a régua é a projeção da Oi: por estar num processo judicial, ela foi publicada como receita líquida, com os custos a cargo do comprador.</p>
+  </div>
+</section>
+
+<!-- A7 -->
+<section id="a7" aria-labelledby="t-a7">
+  <div class="wrap">
+    <div class="sec-num">A7 · A conciliação</div>
+    <h2 class="sec-title" id="t-a7">A esteira do estudo é o controle financeiro da retirada</h2>
+    <p class="sec-intro">As seis evidências que o estudo propôs entre o poste e o caixa são, na linguagem de quem audita, a cadeia que transforma tonelada em receita conferível. Cada diferença entre dois elos é uma perda com nome.</p>
+    <figure>
+      <figcaption>Figura A7 · Da tonelada esperada ao real recebido: cada degrau, uma perda</figcaption>
+      <ol class="chain">
+        <li><b>kg esperado</b><span>ordem por trecho</span><em>ponto de partida</em></li>
+        <li><b>kg pesado</b><span>balança</span><em>diferença: perda física (furto), mistura, divergência de cadastro</em></li>
+        <li><b>kg faturado</b><span>nota fiscal</span><em>diferença: material pesado e não faturado</em></li>
+        <li><b>R$ recebido</b><span>caixa</span><em>diferença: valor faturado e não recebido</em></li>
+      </ol>
+    </figure>
+    <div class="tabela" role="region" aria-label="O que cada evidência prova no financeiro" tabindex="0">
+      <table>
+        <caption>O que cada evidência prova no financeiro (estudo, p. 24)</caption>
+        <thead><tr><th scope="col">Evidência</th><th scope="col">Documento</th><th scope="col">O que prova</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">01 · Ordem por trecho</th><td>ID do cabo, postes, extensão, peso esperado</td><td>Base: o que deveria descer</td></tr>
+          <tr><th scope="row">02 · Registro em campo</th><td>Foto georreferenciada antes e depois</td><td>Que a retirada aconteceu</td></tr>
+          <tr><th scope="row">03 · Pesagem</th><td>Ticket de balança vinculado à ordem</td><td>Volume que vai virar preço</td></tr>
+          <tr><th scope="row">04 · Transporte</th><td>Nota fiscal e manifesto de resíduos</td><td>Custódia entre poste e pátio</td></tr>
+          <tr><th scope="row">05 · Destinação</th><td>Certificado do processador ou fundição</td><td>Saída legal do material</td></tr>
+          <tr><th scope="row">06 · Conciliação</th><td>km × kg esperado × kg pesado × kg faturado × R$</td><td>Onde cada perda aparece</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <aside class="ask" aria-labelledby="t-a7-ask">
+      <h3 id="t-a7-ask">Sem a esteira, a receita do cobre é declaração</h3>
+      <p>Com ela, cada quilo tem origem, peso, preço e recebimento conferíveis, e a diferença entre o esperado e o recebido deixa de ser "perda operacional" genérica para virar perda física, divergência de cadastro, material não faturado ou valor não recebido, cada uma com um responsável. É o mesmo controle que o setor já faz com o modem que volta pela logística reversa.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- A8 -->
+<section class="dl" id="a8" aria-labelledby="t-a8">
+  <div class="wrap">
+    <div class="sec-num" style="color:var(--teal-bright)">A8 · Posição</div>
+    <h2 id="t-a8">O ninho de mafagafos tem preço. Enquanto ele não tiver linha, todos pagam e ninguém registra.</h2>
+    <p>O estudo mostrou que o cabo morto fica por falta de incentivo, de método e de rastreabilidade. Em reais, as três faltas são uma só: a retirada não tem preço, não tem centro de custo e não tem indicador. Por isso ela é paga de forma invisível: em horas de técnico desviadas, em visitas repetidas ao mesmo poste e em metas anunciadas sem base.</p>
+    <p>A Lei dos Postes pode mudar isso se trouxer o que o estudo pediu: preço por unidade, responsável por trecho e conciliação do que desce. Aí a retirada deixa de ser custo escondido e passa a ser operação com orçamento, receita e controle.</p>
+    <blockquote class="final">
+      <p class="lbl">A pergunta para quem aprova o orçamento</p>
+      <p>Quanto custa, por ano, o cabo que a sua empresa não retira, e em que linha do seu resultado esse número aparece hoje?</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- A9 -->
+<section id="a9" aria-labelledby="t-a9">
+  <div class="wrap">
+    <div class="sec-num">A9 · Contas e premissas</div>
+    <h2 class="sec-title" id="t-a9">Todas as contas, para quem quiser refazer</h2>
+    <div class="tabela" role="region" aria-label="Contas do adendo" tabindex="0">
+      <table>
+        <caption>Cálculos do adendo e páginas do estudo de origem</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Cálculo (páginas do estudo)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Valor do dono do cobre</th><td>89 a 95 mil t × R$ 9,05 / 9,50 / 12,50 = R$ 0,81 a 0,86 / 0,85 a 0,90 / 1,11 a 1,19 bi (p. 14)</td></tr>
+          <tr><th scope="row">Custo de campo do cobre</th><td>89 a 95 mil t × R$ 6 a 12/kg = R$ 0,53 a 1,14 bi (p. 15)</td></tr>
+          <tr><th scope="row">Equipe-dia em custo/kg</th><td>R$ 3 mil ÷ 520 kg = R$ 5,77; R$ 4 mil ÷ 347 kg = R$ 11,53 (p. 15); laudo de 2023: R$ 5 a 10; contrato de 2026: R$ 15 com logística</td></tr>
+          <tr><th scope="row">Custo total do comprador</th><td>89 a 95 mil t × R$ 15/kg = R$ 1,34 a 1,43 bi (contrato de 2026)</td></tr>
+          <tr><th scope="row">Desembolso do comprador</th><td>R$ 9,50 + 15 = R$ 24,50/kg; × 89 a 95 mil t = R$ 2,18 a 2,33 bi</td></tr>
+          <tr><th scope="row">Técnico-hora e equipe-hora</th><td>R$ 3 mil a 4 mil ÷ 13 técnico-horas = R$ 231 a 308; ÷ 6,5 h = R$ 462 a 615 (p. 15)</td></tr>
+          <tr><th scope="row">Drop retirado</th><td>40 min × R$ 231 = R$ 154; 2 h × R$ 308 = R$ 615 (p. 8)</td></tr>
+          <tr><th scope="row">Drop por ano</th><td>4 mi × R$ 154 = R$ 0,62 bi; 7,5 mi × R$ 615 = R$ 4,62 bi (p. 10)</td></tr>
+          <tr><th scope="row">Custo por poste</th><td>R$ 3 mil ÷ 26 = R$ 115; R$ 4 mil ÷ 17 = R$ 235 (p. 15)</td></tr>
+          <tr><th scope="row">Visita repetida</th><td>20 min de equipe = R$ 154 a 205; 5 a 9 visitas extras = R$ 0,77 a 1,85 mil por poste (p. 22)</td></tr>
+          <tr><th scope="row">Mil técnicos por ano</th><td>500 equipes × 180 dias × R$ 3 mil a 4 mil = R$ 270 a 360 mi (p. 19)</td></tr>
+          <tr><th scope="row">Cobre aéreo da Oi em equipes</th><td>2.250 a 3.370 técnicos ÷ 2 × 180 dias = 202 mil a 303 mil equipes-dia × R$ 3 mil a 4 mil = R$ 0,61 a 1,21 bi</td></tr>
+          <tr><th scope="row">Calendário</th><td>220 ÷ 180 − 1 = +22% (p. 19)</td></tr>
+          <tr><th scope="row">Meta de cobre da Vivo</th><td>(3.000 − 443) ÷ 29 meses = R$ 88 mi/mês (p. 21)</td></tr>
+          <tr><th scope="row">Meta da Oi</th><td>R$ 23,4 mi ÷ R$ 1.100 mi = 2% (p. 21)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="sub">Premissas declaradas</h3>
+    <ul class="plist">
+      <li>Custo de equipe-dia (R$ 3 mil a 4 mil), produção por equipe, tempos por poste e por drop são premissas de campo do estudo. A equipe-dia gera R$ 5,77 a 11,53/kg, dentro das referências públicas: laudo de 2023 (R$ 5 a 10/kg, só retirada) e contrato de 2026 (R$ 15/kg, com transporte e beneficiamento).</li>
+      <li>Os valores em reais medem ordem de grandeza; não incluem logística, pátio, impostos, margem nem risco.</li>
+      <li>O drop por ano supõe que cada cancelamento deixa um drop a retirar, como no cenário do estudo.</li>
+      <li>Nenhuma afirmação de irregularidade é feita sobre as empresas citadas no estudo. Este adendo não é recomendação de investimento.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- A10 -->
+<section class="alt" id="a10" aria-labelledby="t-a10">
+  <div class="wrap">
+    <div class="sec-num">A10 · Glossário e fontes</div>
+    <h2 class="sec-title" id="t-a10">Glossário</h2>
+    <dl class="gloss">
+      <div><dt>Capex</dt><dd>Investimento que vira ativo e é depreciado ao longo dos anos.</dd></div>
+      <div><dt>Opex</dt><dd>Custo do período, como a manutenção da planta.</dd></div>
+      <div><dt>EBITDA</dt><dd>Resultado antes de juros, impostos, depreciação e amortização.</dd></div>
+      <div><dt>Receita × ganho</dt><dd>Receita vem da atividade da empresa; ganho vem da venda de um ativo seu, como o cabo baixado.</dd></div>
+      <div><dt>Provisão</dt><dd>Obrigação presente, com saída de caixa provável e valor estimável, registrada no balanço.</dd></div>
+      <div><dt>Custo de oportunidade</dt><dd>O que se deixa de ganhar ao usar o recurso em outra atividade.</dd></div>
+      <div><dt>Equipe-dia</dt><dd>Custo de um dia de uma equipe completa em campo.</dd></div>
+      <div><dt>Custo unitário</dt><dd>Custo por poste, por quilo ou por drop: a base do preço por unidade.</dd></div>
+      <div><dt>Conciliação</dt><dd>Comparação entre elos da cadeia para achar e explicar diferenças.</dd></div>
+      <div><dt>Inadimplência</dt><dd>Valor faturado que não foi pago.</dd></div>
+    </dl>
+    <h2 class="sec-title" style="margin-top:56px">Fontes</h2>
+    <ul class="fontes">
+      <li><a href="../">Kleber Nascimento: Lei dos Postes, o ninho de mafagafos não sai do poste nem por decreto (nov/2026)</a>, todas as entradas numéricas; fontes primárias citadas no estudo, p. 14 a 24 e 29.</li>
+      <li>CPC 25 (IAS 37): provisões, passivos e ativos contingentes.</li>
+      <li>CPC 27 (IAS 16), itens 16 e 68: custo de remoção no ativo; ganho na baixa.</li>
+      <li>Resolução Conjunta Aneel/Anatel nº 4/2014: custo da regularização no ocupante.</li>
+      <li>PL 3220/2019: substitutivo aprovado na Câmara em 04/11/2026.</li>
+      <li>Teletime, 05/07/2023: laudo do cobre da Oi; retirada de R$ 5 a 10/kg.</li>
+      <li>Teletime, 03/07/2025: projeção de R$ 1,1 bi em receita operacional líquida.</li>
+      <li>Teletime, 23/07/2026; Canaltech: contrato de 2026, R$ 9,50 líquido e R$ 15/kg de retirada e logística.</li>
+      <li>Capital Aberto, 10/11/2025; Migalhas, 25/08/2026; fato relevante da Oi, 26/08/2026: falência da Oi.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt" id="leia-tambem" aria-labelledby="t-leia">
+  <div class="wrap">
+    <div class="sec-num" id="t-leia">Leia também</div>
+    <div class="qgrid">
+      <a class="q" href="../" data-goatcounter-click="leia-tambem-adendo-1" style="display:block"><div class="k">1 · Estudo</div><h3>Lei dos Postes: o ninho de mafagafos não sai do poste nem por decreto</h3><p>Os porquês, os números e o que precisa existir. PDF de 30 páginas.</p></a>
+      <a class="q" href="../../../#fase-zero" data-goatcounter-click="leia-tambem-adendo-2" style="display:block"><div class="k">2 · Diligência</div><h3>Toda sinergia depende de um sistema. Quem auditou esse sistema?</h3><p>A Fase Zero técnica antes do closing.</p></a>
+      <a class="q" href="https://www.linkedin.com/pulse/o-cobre-saiu-vulnerabilidade-persistiu-vinte-e-cinco-wabkf/" target="_blank" rel="noopener" data-goatcounter-click="leia-tambem-adendo-3" style="display:block"><div class="k">3 · Resiliência</div><h3>O cobre saiu. A vulnerabilidade persistiu.</h3><p>Vinte e cinco anos depois, o clima ainda decide quando o Brasil fica offline. <span class="sr">(abre no LinkedIn)</span></p></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato" aria-labelledby="t-contato" style="border-top:1px solid var(--line-dark)">
+  <div class="wrap">
+    <h2 id="t-contato">Due diligence técnica e operacional, integração pós-aquisição e rastreabilidade de ativos.</h2>
+    <p>Se a sua operação vai regularizar rede aérea, integrar uma aquisição ou auditar inventário, vamos conversar.</p>
+    <div class="links">
+      <a class="btn solid" href="https://wa.me/5511953048791?text=Ol%C3%A1%2C%20Kleber.%20Li%20o%20adendo%20financeiro%20do%20estudo%20da%20Lei%20dos%20Postes%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" data-goatcounter-click="contato-whatsapp">Falar no WhatsApp</a>
+      <a class="btn" href="../../../#servicos">Ver serviços</a>
+      <a class="btn" href="https://www.linkedin.com/in/kleber-alexandre-barros-nascimento-0abb5424/" target="_blank" rel="noopener" data-goatcounter-click="contato-linkedin">LinkedIn</a>
+      <a class="btn" href="mailto:klbaoti@yahoo.com.br" data-goatcounter-click="contato-email">klbaoti@yahoo.com.br</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 <b>Kleber Nascimento</b> · Diligência de Integração Técnica · Arujá, SP</div>
+    <div>Contratação via <span class="et">EveryThinks Hub Digital</span></div>
+    <div style="flex-basis:100%;font-size:11.5px;opacity:.75">Este site mede visitas de forma anônima, sem cookies.</div>
+  </div>
+</footer>
+<script>
+  (function(){var b=document.getElementById('navtoggle'),n=document.getElementById('nl');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});})();
+</script>
+<script data-goatcounter="https://kleber1011.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
